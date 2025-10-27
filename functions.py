@@ -1,3 +1,4 @@
+import emoji
 def evenOdd(x):
   if (x%2==0):
     print(f"{x} is an even number")
@@ -33,7 +34,7 @@ def create_profile(**user_info):
   for field, info in user_info.items():
     print(f"{field.title()}:{info}")
   print("-" * 30)
-  print("Profile completed!\n")
+  print(emoji.emojize("Profile completed!:yellow_heart:"))
 
 create_profile(
   username ="eva254",
@@ -59,15 +60,16 @@ place_order(
 #Combining **kwargs with regular Parameters
 print("We deliver all types of commodities, be it clothes, food,textile, acessories! We've got you")
 def jade(clothes, food, **extras):
-  print("*"*40)
-  print("I confirm this is the order that I want")
+  print(emoji.emojize(":red_heart:  ")*20)
+  print("I CONFIRM THIS IS THE ORDER I WANT!")
   print(f"I have ordered for {clothes}, \n{food}")
   if extras:
-    print("`" *30)
+    print(emoji.emojize(":blue_heart: ")*20)
     for type, amount in extras.items():
-      print("\nThis is a new and seperate order form the main one")
+      print("\nADDITONAL ITEMS (Separate Order):")
       print(f"I add {amount} of {type} to the initial order!")
     print("`" *30)
+    print(emoji.emojize("THANK YOU FOR SHOPPING WITH US:red_heart:"))
 jade(
   clothes= "1 jacket, 2 sweat pants, 4 langaries",
   food="1pizzz,2 chicken packs",
@@ -75,3 +77,5 @@ jade(
   textile = "Carpet(1 piece), duvet(6*6)",
 
 )
+
+print(emoji.emojize(":star:")*10)
