@@ -56,4 +56,22 @@ place_order(
   dinner = "buffet"
 
 )
+#Combining **kwargs with regular Parameters
+print("We deliver all types of commodities, be it clothes, food,textile, acessories! We've got you")
+def jade(clothes, food, **extras):
+  print("*"*40)
+  print("I confirm this is the order that I want")
+  print(f"I have ordered for {clothes}, \n{food}")
+  if extras:
+    print("`" *30)
+    for type, amount in extras.items():
+      print("\nThis is a new and seperate order form the main one")
+      print(f"I add {amount} of {type} to the initial order!")
+    print("`" *30)
+jade(
+  clothes= "1 jacket, 2 sweat pants, 4 langaries",
+  food="1pizzz,2 chicken packs",
+  appliences = "Microwave, 32` TV, Laptop",
+  textile = "Carpet(1 piece), duvet(6*6)",
 
+)
