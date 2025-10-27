@@ -1,4 +1,4 @@
-import emoji
+import emoji # type: ignore
 def evenOdd(x):
   if (x%2==0):
     print(f"{x} is an even number")
@@ -30,11 +30,12 @@ introduce_yourself(name = "Evelyne Njambi", age = 19, city ="Paris", hobby = "co
 #Case 2
 def create_profile(**user_info):
   print("Creating your beautiful profile, Evelyne!")
-  print("-" * 30)
+  print(emoji.emojize(":sparkles: ")*20)
   for field, info in user_info.items():
     print(f"{field.title()}:{info}")
   print("-" * 30)
-  print(emoji.emojize("Profile completed!:yellow_heart:"))
+  print("Profile completed!")
+  print(emoji.emojize(":check_mark_button: ")*17)
 
 create_profile(
   username ="eva254",
@@ -79,3 +80,10 @@ jade(
 )
 
 print(emoji.emojize(":star:")*10)
+
+print(emoji.emojize(":down_arrow:"))
+#Using the *args
+def tools(*args):
+  for arg in args:
+    print(arg)
+tools("pliers", "Cables", "Shovel", "plaster")
