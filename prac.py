@@ -37,15 +37,26 @@ def cafe_order(name, *main_drinks, **customized_drinks):
             print(f"{i}. {drinks.title()}")
 
     if customized_drinks:
-        print(emoji.emojize(":sparkles: CUSTOMIZATIONS"))
-        for drink, customization in enumerate(customized_drinks.items(), 1):
-            print(f"\n{drink}: {customization}")n
-
-
-
+        print(emoji.emojize(":sparkles: CUSTOMIZATIONS :sparkels:"))
+        for i, ( drink, customization) in enumerate(customized_drinks.items(),1):
+            print(f"\n{i}. {drink.replace('-', '').title()}: {customization}")
 
 cafe_order("EVELYNE", "Latte", "cappuccino", "hot chocolate",
-           Lette= "Extra sugar, Whipped Cream",
+           Latte= "Extra sugar, Whipped Cream",
            Cappuccino = "Double shot, Almond milk",
            Hot_chocolate = "Marshmallows, Extra Chocolate"
            )
+
+print("-"*40)
+
+#Lambda Functions
+print(emoji.emojize(":red_heart: ")*18)
+square = lambda x : x**2
+multiply = lambda x, y:x*y
+is_even = lambda x: x%2 ==0
+print(f"The square of 5: {square(5)}")
+print(f"4 times 6 is {multiply(4,6)}")
+print(f"Is 7 even? {is_even(7)}")
+
+shout = lambda name, age: f"My name is {name.upper()}. I am {age} yers old."
+print(shout("Evelyne", 19))
