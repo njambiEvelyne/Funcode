@@ -1,6 +1,8 @@
 import functools
 import operator
 from functools import reduce
+import emoji
+
 class Car:
   def __init__(self, name, brand):
     self.name = name
@@ -45,3 +47,34 @@ nums = [1,3,5,7,9]
 print(functools.reduce(operator.add, nums))
 print(functools.reduce(operator.mul,nums))
 print(functools.reduce(operator.sub, nums))
+print(emoji.emojize(":red_heart: ")*20)
+
+#filter 
+def start_a(w):
+  return w.startswith("a")
+
+li=["apples", "banana", "avocado", "cherry", "apricot"]
+res6 = filter(start_a, li)
+print(list(res6))
+
+def even(n):
+  return n % 2 ==0
+a=[1,2,3,4,5,6]
+b = filter(even, a)
+print(list(b))
+
+def odd(r):
+  return r % 2 !=0
+d = [1,4,6,8,9,2,23]
+f = filter(odd, d)
+print(list(f))
+print("-"*40)
+
+#filter with lambda
+a = [1,2,3,4,6,8,9]
+b = filter(lambda s: s %2 ==0, a)
+print(list(b))
+c = map(lambda c: "Even" if c % 2 == 0 else "Odd", a)
+print(list(c))
+
+
