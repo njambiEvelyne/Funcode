@@ -1,4 +1,4 @@
-import emoji
+import emoji # type: ignore
 
 def store(*in_store, **need_restock):
     # Display items already in store

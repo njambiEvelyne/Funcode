@@ -1,7 +1,7 @@
 import functools
 import operator
 from functools import reduce
-import emoji
+import emoji # type: ignore
 
 class Car:
   def __init__(self, name, brand):

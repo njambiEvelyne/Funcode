@@ -1,4 +1,4 @@
-import emoji
+import emoji # type: ignore
 print("-"*40)
 name = input("Enter your name: ")
 marks = int(input("Enter your marks: "))
