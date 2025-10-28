@@ -63,5 +63,32 @@ print(shout("Evelyne", 19))
 
 
 compliment = lambda name: f"{name.title()}! That's amazing"
-formatted_name = list(map())
 print(compliment("evelyne"))
+
+#Global variables
+s = "I love coding"
+def fun():
+    global s
+    s += " GFG"
+    print(s)
+    s = "Look for a course to pursue online"
+    print(s)
+fun()
+#Recursion
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(5))
+print("-"*40)
+def countdown(n):
+    #Base case - when to stop
+    if n <=0:
+        print("Blast off!")
+        return
+    #Recursive case - call itself
+    print(f"{n}...")
+    countdown(n-1) #call itself with n-1
+
+countdown(5)
