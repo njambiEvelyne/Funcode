@@ -60,3 +60,8 @@ print(f"Is 7 even? {is_even(7)}")
 
 shout = lambda name, age: f"My name is {name.upper()}. I am {age} yers old."
 print(shout("Evelyne", 19))
+
+
+compliment = lambda name: f"{name.title()}! That's amazing"
+formatted_name = list(map())
+print(compliment("evelyne"))
