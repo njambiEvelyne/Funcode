@@ -1,3 +1,6 @@
+import functools
+import operator
+from functools import reduce
 class Car:
   def __init__(self, name, brand):
     self.name = name
@@ -16,5 +19,29 @@ class Circle:
 ins = Circle(5)
 print(ins.area())
 
-    
+a = [1,2,3,4,5]
+b = map(lambda x: x*2,a)
+print(list(b))
+
+fruits = ["apple", "bananas", "cherry"]
+res = map(str.title,fruits)
+print(list(res))
+
+
+
+def add(x, y):
+    return x + y
+
+a = [1, 2, 3, 4, 5]
+res = reduce(add, a)
+res3 = reduce(lambda x, y: x+ y,a)
+print(res3)
+print(res)
+res2 = reduce(lambda x,y: x*y, a)
+print(res2)
   
+#The use of reduce with operator
+nums = [1,3,5,7,9]
+print(functools.reduce(operator.add, nums))
+print(functools.reduce(operator.mul,nums))
+print(functools.reduce(operator.sub, nums))
