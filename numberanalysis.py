@@ -21,7 +21,7 @@ average = functools.reduce(operator.add, numbers)/len(numbers)
 print(f"The average is: {average}")
 # for num in numbers:
 #   if num > average:
-#     print(f"The following nnumbers are greater than the average:")
+#     print(f"The following numbers are greater than the average:")
     
 greater = filter(lambda g: g>average, numbers)
 print("Numbers greater than the average:")
