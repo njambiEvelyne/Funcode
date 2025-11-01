@@ -42,5 +42,11 @@ class Myclass:
         print("Hello!")
 obj1 = Myclass()
 obj1.say_hello()
+print("-"*40)
+#Built-in Decorators
+class MathOperations:
+    @staticmethod
+    def add (x, y):
+        return x+y
 
 
