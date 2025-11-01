@@ -25,3 +25,22 @@ def simple_decorator(func):
 def greet():
     print("Hello world!")
 greet()
+print("-"*40)
+
+#Method decorator
+def decorator(func):
+    def wrapper(self, *args, **kwags):
+        print("Before method execution")
+        res = func(self, *args, **kwags)
+        print("After method excecution")
+        return res
+    return wrapper
+
+class Myclass:
+    @decorator
+    def say_hello(self):
+        print("Hello!")
+obj1 = Myclass()
+obj1.say_hello()
+
+
