@@ -44,9 +44,55 @@ obj1 = Myclass()
 obj1.say_hello()
 print("-"*40)
 #Built-in Decorators
+#1. @staticmethod
 class MathOperations:
     @staticmethod
     def add (x, y):
         return x+y
+res = MathOperations.add(4,5)
+print(res)
+print("-"*40)
+#2. @classmethod
+class Employee:
+    raise_amount = 1.05
+    def __init__(self, name, salary):
+        self.name =name
+        self.salary = salary
+
+    @classmethod
+    def set_raised_amount(cls, amount):
+        cls.raise_amount = amount
+#Using the class method
+Employee.set_raised_amount(1.10)
+print(Employee.raise_amount)
+print("-"*40)
+#3. @property 
+class Circle:
+    def __init__(self, radius):
+        self._radius = radius
+
+    @property
+    def radius(self):
+        return self._radius
+
+    @radius.setter
+    def radius(self, value):
+        if value >= 0:
+            self._radius = value
+        else:
+            raise ValueError("Radius cannot be negative")
+
+    @property
+    def area(self):
+        return 3.14159 * (self._radius ** 2)
+
+# Using the property
+c = Circle(5)
+print(c.radius) 
+print(c.area)    
+c.radius = 10
+print(c.area)
+        
+
 
 
